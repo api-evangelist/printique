@@ -1,0 +1,60 @@
+aid: printique-plans-pricing
+name: Printique Plans and Pricing
+description: >-
+  Printique does not sell API access or API usage plans - it has no public
+  developer or fulfillment API. Its commercial model is per-product retail
+  pricing on printique.com plus an optional Pro membership that unlocks tiered
+  wholesale savings and business services (including the Squarespace and
+  PhotoShelter integrations used for automated ordering). Pricing below is
+  sourced from Printique's public FAQ and Pro-for-business pages as of the
+  review date; per-product prices are set on individual product pages and are
+  not reproduced here.
+source:
+  - url: https://www.printique.com/company/faq/
+    type: Documentation
+  - url: https://www.printique.com/company/printique-pro-photo-lab-for-businesses/
+    type: Documentation
+currency: USD
+apiPlans: false
+apiPlansNote: >-
+  There are no API plans. Printique exposes no public API, so there is no
+  metered API pricing, no API tiers, and no rate-limit or quota structure to
+  document.
+membership:
+  name: Printique Pro
+  audience: Professional photographers and photography businesses
+  pricing:
+    - term: Monthly
+      price: 14.95
+      unit: per month
+    - term: Annual
+      price: 159.95
+      unit: per year
+  tieredSavings:
+    - tier: Silver
+      discount: 15% off
+      qualification: Up to $1,000 in annual spend
+    - tier: Gold
+      discount: 20% off
+      qualification: $1,000 to $10,000 in annual spend
+    - tier: Platinum
+      discount: 25% off
+      qualification: $10,000 or more in annual spend
+  benefits:
+    - Tiered wholesale savings on prints and products
+    - White-label blind shipping (no Printique branding on packages)
+    - Dedicated Pro member support
+    - Enhanced quality-control checks
+    - Squarespace integration to sync products and automate order fulfillment
+    - PhotoShelter wholesale print-and-product integration
+    - Fundy Designer album integration
+retail:
+  model: Per-product retail pricing
+  note: >-
+    Consumer pricing for prints, fine-art giclee, books, albums, wall decor,
+    cards, calendars, and gifts is set per product, size, and finish on the
+    corresponding printique.com product pages.
+shipping:
+  freeEconomyThreshold: 100.00
+  freeEconomyNote: Free economy shipping on U.S. orders over $100 (some exclusions apply).
+  canadaTypicalRange: $30 to $60 (can exceed $99 for large items)

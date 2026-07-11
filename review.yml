@@ -1,0 +1,92 @@
+aid: printique
+name: Printique
+review:
+  question: Does Printique expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-11'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Printique does not publish any documented
+    public API at all - REST or otherwise - let alone a WebSocket or
+    server-sent-events transport. There is no developer portal, API reference,
+    or published base URL on Printique's own domain. Printique's automated,
+    real-time-feeling behavior (product sync and order fulfillment) is delivered
+    entirely inside third-party partner platforms (Squarespace, PhotoShelter,
+    Fundy) and desktop plugins (Lightroom, Capture One), each carrying its own
+    protocols. There is no Printique-owned streaming transport to model.
+findings:
+  summary: |
+    Printique does not publish a documented public WebSocket API - and, more
+    broadly, does not publish a documented public developer or fulfillment API
+    of any kind. Printique (An Adorama Company, formerly AdoramaPix) is a
+    professional online photo lab in Brooklyn, NYC producing prints, fine-art
+    giclee, photo books, albums, wall decor, cards, calendars, and gifts. A
+    thorough search of printique.com and the open web found no developer portal,
+    no API reference, no API-key or authentication documentation, and no OpenAPI
+    definition. The only Printique-hosted endpoint discovered is an undocumented
+    internal web-application backend (e.g. https://www.printique.com/app/api/user)
+    that serves the printique.com storefront; it is not a published, supported,
+    or documented public API. No realtime, bidirectional, or streaming WebSocket
+    (ws:// or wss://) endpoint exists.
+  accessModel: |
+    Printique offers no self-serve public API. Programmatic and automated
+    ordering is available only through prebuilt partner-platform integrations:
+    a Squarespace integration that syncs products and automates order
+    fulfillment from a seller's own site; a PhotoShelter wholesale
+    print-and-product integration for professional photographers (wholesale
+    costs billed on a monthly statement, with white-label blind shipping);
+    Fundy Designer album integration; and desktop publish plugins for Adobe
+    Lightroom and Capture One. A Pro membership ($14.95/month or $159.95/year)
+    unlocks tiered wholesale savings (Silver 15%, Gold 20%, Platinum 25%),
+    white-label shipping, and dedicated support.
+  endpointsModeled: true
+  endpointsModeledNote: |
+    Printique publishes no public API paths, base URL, authentication scheme, or
+    request/response schemas. The API surfaces in apis.yml (Product Catalog,
+    Orders and Fulfillment, Order Status and Shipping) are conceptual surfaces
+    modeled from Printique's public product, Pro-for-business, integration, and
+    FAQ pages to describe how ordering and fulfillment work through partner
+    platforms. They are explicitly labeled "(Modeled)" and carry no baseURL. No
+    endpoints, methods, or schemas were fabricated beyond the named,
+    integration-delivered capabilities Printique documents on the open web.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No documented public REST API. An undocumented internal web-app backend under https://www.printique.com/app/api/ serves the storefront but is not a published or supported public API.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere on printique.com or the open web as of the review date.
+  websocketConfirmed: false
+sources:
+  - url: https://www.printique.com/company/printique-pro-photo-lab-for-businesses/
+    type: Documentation
+    note: Printique Pro for business - Squarespace and Fundy integrations, tiered Pro savings (Silver/Gold/Platinum), white-label shipping. No API, no developer docs.
+  - url: https://www.printique.com/company/faq/
+    type: Documentation
+    note: Customer FAQ - products, shipping, Pro membership pricing ($14.95/mo, $159.95/yr). No mention of any developer or fulfillment API.
+  - url: https://support.photoshelter.com/hc/en-us/articles/203373130-Printique-formerly-known-as-AdoramaPix
+    type: Documentation
+    note: PhotoShelter wholesale print-and-product integration with Printique; wholesale costs billed monthly. Platform-mediated, not a Printique public API. (Returned HTTP 403 to automated fetch; summarized from search index.)
+  - url: https://www.printique.com/prints/
+    type: WebPage
+    note: Product catalog - photo prints, fine-art giclee, wall decor, books, albums, cards, calendars, gifts. Sizes and finishes listed for consumers, not exposed as an API.
+  - url: https://www.printique.com/blog/adoramapix-is-now-printique/
+    type: WebPage
+    note: Confirms AdoramaPix rebranded to Printique (An Adorama Company), effective October 3, 2019.
+  - url: https://www.linkedin.com/company/printique-by-adorama
+    type: LinkedIn
+    note: Official Printique by Adorama LinkedIn company page, Brooklyn NYC.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket protocol surface exists on Printique - and no documented public
+    API of any kind exists. No AsyncAPI document was created because there is no
+    Printique-owned server-push transport to model. The apis.yml catalogs three
+    conceptual, integration-delivered surfaces (Product Catalog, Orders and
+    Fulfillment, Order Status and Shipping) with endpointsModeled true, since
+    Printique publishes no developer portal, base URL, paths, or schemas on the
+    open web.
