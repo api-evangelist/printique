@@ -97,6 +97,8 @@ apis:
     surface is modeled (endpointsModeled true) from Printique's FAQ and Pro
     shipping documentation.
 common:
+- type: DomainSecurity
+  url: security/printique-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/printique-by-adorama
 - type: Website
