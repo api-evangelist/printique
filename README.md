@@ -37,23 +37,8 @@ Because no public API surface is documented, the API entries in `apis.yml` are h
 
 These are conceptual surfaces that describe how Printique ordering and fulfillment work through partner platforms. Printique publishes no public paths, parameters, or schemas for any of them.
 
-### Printique Product Catalog (Modeled)
 
-Printique's print products — photo prints, fine-art giclee, photo books, albums, metal/acrylic/canvas/glass/framed/wood wall decor, cards, calendars, and gifts, with sizes, papers, and finishing options. Product data reaches partners only through the Squarespace and PhotoShelter integrations.
 
-- **Human URL:** [https://www.printique.com/company/printique-pro-photo-lab-for-businesses/](https://www.printique.com/company/printique-pro-photo-lab-for-businesses/)
-
-### Printique Orders and Fulfillment (Modeled)
-
-Order placement and fulfillment. Automated fulfillment is real but delivered through partner platforms — Squarespace automates fulfillment from a seller's site, and PhotoShelter offers Printique wholesale prints with white-label blind shipping billed monthly. No public orders API, base URL, or schema is documented.
-
-- **Human URL:** [https://www.printique.com/company/printique-pro-photo-lab-for-businesses/](https://www.printique.com/company/printique-pro-photo-lab-for-businesses/)
-
-### Printique Order Status and Shipping (Modeled)
-
-Production and shipment status, including white-label blind shipping for Pro members. Status is communicated through the account UI, email, and connected partner platforms rather than a public status API.
-
-- **Human URL:** [https://www.printique.com/company/faq/](https://www.printique.com/company/faq/)
 
 ## Plans and Pricing
 
