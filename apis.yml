@@ -3,6 +3,17 @@ url: https://raw.githubusercontent.com/api-evangelist/printique/refs/heads/main/
 name: Printique
 kind: company
 description: Printique (An Adorama Company, formerly AdoramaPix) is a professional online photo lab based in Brooklyn, NYC that produces photo prints, fine-art giclee prints, photo books, albums, wall decor (metal, acrylic, canvas, glass, framed, wood), cards, calendars, and photo gifts. Printique does NOT publish a documented public developer or fulfillment API. There is no developer portal, no published REST reference, no API keys, and no OpenAPI definition on the open web. Programmatic and automated ordering is instead delivered through prebuilt partner-platform integrations - a Squarespace integration that syncs products and automates order fulfillment, a PhotoShelter wholesale print-and-product integration for professional photographers, Fundy Designer album integration, and desktop plugins for Adobe Lightroom and Capture One that publish images directly to Printique. A Pro membership tier ($14.95/month or $159.95/year) unlocks tiered wholesale savings, white-label blind shipping, and dedicated support for photography businesses. The logical API surfaces below (catalog, orders, order status) are honestly modeled from Printique's public product, Pro, and integration pages to describe how ordering works conceptually; they are NOT transcribed from any released or documented Printique API. No public endpoints, paths, or request/response schemas are published, so endpointsModeled is true and no endpoint surface has been fabricated beyond these named, integration-delivered capabilities.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: open
