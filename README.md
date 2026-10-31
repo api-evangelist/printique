@@ -1,4 +1,4 @@
-# Printique (printique)
+# Printique
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,67 +64,87 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Printique (An Adorama Company, formerly **AdoramaPix**) is a professional online photo lab based in Brooklyn, NYC. It produces photo prints, fine-art giclee prints, photo books, albums, wall decor (metal, acrylic, canvas, glass, framed, and wood), cards, calendars, and photo gifts. AdoramaPix was established in 1998 and rebranded to Printique effective October 3, 2019.
+Printique (An Adorama Company, formerly AdoramaPix) is a professional online photo lab based in Brooklyn, NYC that produces photo prints, fine-art giclee prints, photo books, albums, wall decor (metal, acrylic, canvas, glass, framed, wood), cards, calendars, and photo gifts. Printique does NOT publish a documented public developer or fulfillment API. There is no developer portal, no published REST reference, no API keys, and no OpenAPI definition on the open web. Programmatic and automated ordering is instead delivered through prebuilt partner-platform integrations - a Squarespace integration that syncs products and automates order fulfillment, a PhotoShelter wholesale print-and-product integration for professional photographers, Fundy Designer album integration, and desktop plugins for Adobe Lightroom and Capture One that publish images directly to Printique. A Pro membership tier ($14.95/month or $159.95/year) unlocks tiered wholesale savings, white-label blind shipping, and dedicated support for photography businesses. The logical API surfaces below (catalog, orders, order status) are honestly modeled from Printique's public product, Pro, and integration pages to describe how ordering works conceptually; they are NOT transcribed from any released or documented Printique API. No public endpoints, paths, or request/response schemas are published, so endpointsModeled is true and no endpoint surface has been fabricated beyond these named, integration-delivered capabilities.
 
-## Access Model — No Public API
+**Areas:** Photo Printing · Print Fulfillment · Photo Lab · Photography · Print · Albums · Wall Art · Print on Demand
 
-**Printique does not publish a documented public developer or fulfillment API.** There is no developer portal, no API reference, no API keys or authentication documentation, and no OpenAPI definition on the open web. The only Printique-hosted endpoint that exists is an undocumented internal web-application backend (e.g. `https://www.printique.com/app/api/user`) that serves the printique.com storefront — it is **not** a published, supported, or documented public API.
+## Printique on APIs.io
 
-Programmatic and automated ordering is delivered entirely through **prebuilt partner-platform integrations**, not a Printique-owned API:
+Everything profiled for Printique is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/printique/](https://apis.io/providers/printique/)** — or go straight to one of the APIs or properties below.
 
-- **Squarespace** — syncs products and automates order fulfillment directly from a seller's own site.
-- **PhotoShelter** — wholesale print-and-product integration for professional photographers; wholesale costs are billed on a monthly statement, with white-label blind shipping.
-- **Fundy Designer** — album design integration.
-- **Adobe Lightroom** and **Capture One** — desktop plugins that publish images directly to Printique.
+### Published properties
 
-Because no public API surface is documented, the API entries in `apis.yml` are honestly **modeled** (`endpointsModeled: true`) from Printique's public product, Pro-for-business, integration, and FAQ pages. They are labeled "(Modeled)", carry no base URL, and no endpoints or schemas have been fabricated.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/printique/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/printique/refs/heads/main/apis.yml)
+#### Security (1)
 
-## Tags
+Authentication, trust centre, and vulnerability disclosure.
 
-- Photo Printing
-- Print Fulfillment
-- Photo Lab
-- Photography
-- Prints
-- Albums
-- Wall Art
-- Print on Demand
+- [Printique Domain Security](https://apis.io/security/printique/printique-domain-security/)
 
-## Timestamps
+#### Plans and pricing (1)
 
-- **Created:** 2026-07-11
-- **Modified:** 2026-07-11
+Published plans, tiers and prices.
 
-## APIs (Modeled)
+- [Printique Plans Pricing](https://apis.io/plans/printique/printique-plans-pricing/)
 
-These are conceptual surfaces that describe how Printique ordering and fulfillment work through partner platforms. Printique publishes no public paths, parameters, or schemas for any of them.
+## Where to find this API
 
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-
-
-## Plans and Pricing
-
-Printique sells **no API access**. Its commercial model is per-product retail pricing plus an optional **Printique Pro** membership:
-
-- **Pro membership:** $14.95/month or $159.95/year.
-- **Tiered wholesale savings:** Silver 15% (up to $1,000/yr spend), Gold 20% ($1,000–$10,000/yr), Platinum 25% ($10,000+/yr).
-- **Benefits:** wholesale savings, white-label blind shipping, dedicated Pro support, enhanced QC, and the Squarespace / PhotoShelter / Fundy integrations.
-- **Shipping:** free U.S. economy shipping on orders over $100 (some exclusions).
-
-See [`plans/printique-plans-pricing.yml`](plans/printique-plans-pricing.yml).
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/printique-by-adorama)
 - [Website](https://www.printique.com)
 - [Documentation](https://www.printique.com/company/printique-pro-photo-lab-for-businesses/)
-- [Integrations](https://support.photoshelter.com/hc/en-us/articles/203373130-Printique-formerly-known-as-AdoramaPix)
-- [Plans](plans/printique-plans-pricing.yml)
 - [Blog](https://www.printique.com/blog/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 5.8** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/printique/](https://apis.io/providers/printique/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Printique: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/printique/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
